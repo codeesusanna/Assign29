@@ -1,0 +1,18 @@
+n = int(input('enter n: '))
+list=[]
+c=0
+for i in range(n):
+    x = int(input())
+    list.append(x)
+    if i%2==0:
+       c+=1
+print('list = ',list)
+print('no. of primes = ',c)
+print('primes are : ')
+for a in range(len(list)):
+    if a>1:
+       for i in range(2,a//2+1):
+           if a%i==0:
+             break
+       else: 
+           print(a,end=' ')
